@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>집반찬</title>
+
+  <link href="dist/output.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="font-sans text-black">
+
+
+  <!-- Main -->
+  <main class="max-w-[1200px] w-full mx-auto min-h-[600px] ">
+
+    <!-- 어린이 반찬 -->
+    <div class="kid-banchan w-full h-[600px] border-blue-500 flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        어린이 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+      <!-- 4개 카드 -->
+      <!-- <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/02_kid_banchan/kid_banchan1.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-extrabold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-extrabold">2800원</h5>
+        </div>
+      </a> -->
+
+      <!-- 4개 카드 수정-->
+      <!-- <a href="#">
+        <div class="product-card">
+          <img src="img/02_kid_banchan/kid_banchan1.jpg" class="card-img" alt="" />
+          <h4 class="card-title">무나물</h4>
+          <p class="card-desc">푹 익혀서 먹기 편해요</p>
+          <h5 class="card-price">2800원</h5>
+        </div>
+      </a>
+ -->
+
+    <!-- 여기 안에 JS로 카드들이 채워짐 -->
+
+    </div>
+
+
+  </main>
+
+<script>
+  const URL = "https://dino-21.github.io/zipbanchan/json/02_kidbanchan.json";
+
+  fetch(URL)
+    .then(res => res.json())
+    .then(data => {
+      // 어린이 반찬 박스
+      const box = document.querySelector(".kid-banchan");
+
+      // 기존 카드 삭제 (선택)
+      box.querySelectorAll("a").forEach(a => a.remove());
+
+      data.forEach(item => {
+        // <a>
+        const a = document.createElement("a");
+        a.href = "#";
+
+        // 카드 박스
+        const card = document.createElement("div");
+        card.className = "product-card";
+
+        // 이미지
+        const img = document.createElement("img");
+        img.src = item.main_img;
+        img.alt = item.name;
+        img.className = "card-img";
+
+        // 제목
+        const h4 = document.createElement("h4");
+        h4.textContent = item.name;
+        h4.className = "card-title";
+
+        // 설명
+        const p = document.createElement("p");
+        p.textContent = item.description;
+        p.className = "card-desc";
+
+        // 가격
+        const h5 = document.createElement("h5");
+        h5.textContent = item.price + "원";
+        h5.className = "card-price";
+
+        // 조립
+        card.append(img, h4, p, h5);
+        a.appendChild(card);
+        box.appendChild(a);
+      });
+    })
+    .catch(err => console.error("JSON 로딩 오류:", err));
+</script>
+
+</body>
+
+</html>

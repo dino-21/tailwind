@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>집반찬</title>
+
+  <link href="dist/output.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="font-sans text-black">
+
+
+
+  <!-- Main -->
+  <main class="max-w-[1200px] w-full mx-auto min-h-[600px] ">
+
+    <!-- 부담없는 알뜰 반찬 -->
+    <div class="banchan w-full h-[1000px] flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        부담없는 알뜰 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+
+      <!-- product-card 공통 스타일: 280 x 395 -->
+      <!-- <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan1.jpg" alt=""
+               class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a> -->
+      
+
+      <!-- 1~8 카드 -->
+      <!-- <a href="#">
+        <div class="product-card">
+          <img src="img/01_banchan/banchan6.jpg" class="card-img" alt="" />
+          <h4 class="card-title">무나물</h4>
+          <p class="card-desc">푹 익혀서 먹기 편해요</p>
+          <h5 class="card-price">2800원</h5>
+        </div>
+      </a> -->
+
+      <!-- 여기 안에 JS로 카드들이 채워짐 -->
+  
+
+
+    </div>
+
+  </main>
+
+<script>
+    fetch("https://dino-21.github.io/zipbanchan/json/01_banchan.json")
+      .then(res => res.json())
+      .then(data => {
+        const box = document.querySelector(".banchan");
+
+        data.forEach(item => {
+          box.innerHTML += `
+            <a href="#">
+              <div class="product-card">
+                <img src="${item.main_img}"  class="card-img" alt="${item.name}">
+                <h4 class="card-title">${item.name}</h4>
+                <p class="card-desc">${item.description}</p>
+                <h5 class="card-price">${item.price}원</h5>
+              </div>
+            </a>
+          `;
+        });
+      });
+  </script>
+
+</body>
+
+</html>

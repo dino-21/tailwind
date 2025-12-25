@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>집반찬</title>
+  <!-- Tailwind 빌드 결과 CSS -->
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-black">
+
+  <!-- Header -->
+  <header
+    class="max-w-[1200px] w-full mx-auto flex justify-between flex-wrap items-center h-[150px] bg-yellow-300">
+    <!-- 검색박스 -->
+    <div class="w-[350px] h-[60px] bg-red-500 rounded-lg"></div>
+
+    <!-- 로고 -->
+    <div
+      class="w-[350px] h-[70px] bg-blue-500 text-2xl font-bold flex items-center justify-center text-white">
+      로고
+    </div>
+
+    <!-- 오른쪽 박스 (로그인 + 메뉴) -->
+    <div class="w-[350px] h-[90px] flex flex-col border-[3px] border-blue-500">
+      <div class="w-full h-[30px] text-sm bg-purple-500"></div>
+      <nav class="w-full h-[40px] mt-[35px] bg-black"></nav>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <section id="slider" class="w-full min-h-[450px] bg-[tomato]"></section>
+
+  <!-- Main -->
+  <main class="max-w-[1200px] w-full mx-auto min-h-[600px] bg-sky-300">
+
+    <!-- 부담없는 알뜰 반찬 -->
+    <div
+      class="w-full h-[1000px] border-2 border-red-500 flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        부담없는 알뜰 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+      <div class="w-[280px] h-[395px] bg-white">1</div>
+      <div class="w-[280px] h-[395px] bg-white">2</div>
+      <div class="w-[280px] h-[395px] bg-white">3</div>
+      <div class="w-[280px] h-[395px] bg-white">4</div>
+      <div class="w-[280px] h-[395px] bg-white">5</div>
+      <div class="w-[280px] h-[395px] bg-white">6</div>
+      <div class="w-[280px] h-[395px] bg-white">7</div>
+      <div class="w-[280px] h-[395px] bg-white">8</div>
+    </div>
+
+    <!-- 어린이 반찬 -->
+    <div
+      class="w-full h-[600px] border-2 border-blue-500 flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        어린이 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+      <div class="w-[280px] h-[395px] bg-white">1</div>
+      <div class="w-[280px] h-[395px] bg-white">2</div>
+      <div class="w-[280px] h-[395px] bg-white">3</div>
+      <div class="w-[280px] h-[395px] bg-white">4</div>
+    </div>
+
+    <!-- 새로 나온 반찬 -->
+    <div
+      class="w-full h-[1000px] border-2 border-orange-400 flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        새로 나온 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+      <div class="w-[280px] h-[395px] bg-white">1</div>
+      <div class="w-[280px] h-[395px] bg-white">2</div>
+      <div class="w-[280px] h-[395px] bg-white">3</div>
+      <div class="w-[280px] h-[395px] bg-white">4</div>
+      <div class="w-[280px] h-[395px] bg-white">5</div>
+      <div class="w-[280px] h-[395px] bg-white">6</div>
+      <div class="w-[280px] h-[395px] bg-white">7</div>
+      <div class="w-[280px] h-[395px] bg-white">8</div>
+    </div>
+
+    <!-- 배너 영역 -->
+    <div
+      class="w-full h-[200px] border-2 border-green-500 flex justify-center items-center gap-[15px] my-[30px]">
+      <a href="#">
+        <img src="img/banner/banner1.png" alt=""
+             class="w-[380px] h-[130px]">
+      </a>
+      <a href="#">
+        <img src="img/banner/banner2.png" alt=""
+             class="w-[380px] h-[130px]">
+      </a>
+      <a href="#">
+        <img src="img/banner/banner3.png" alt=""
+             class="w-[380px] h-[130px]">
+      </a>
+    </div>
+
+    <!-- MD 추천반찬 -->
+    <div
+      class="w-full h-[750px] border-2 border-black flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px]  font-bold">
+        MD 추천반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        이번 주 가장 추천하는 제품만 골라드려요
+      </p>
+
+      <!-- 탭 메뉴 -->
+      <ul class="w-full min-h-[45px] flex justify-center gap-5 mb-[30px]">
+        <li class="bg-[#0D5611] text-white py-[10px] px-[20px] rounded-[30px] text-[16px]">
+          비빔밥
+        </li>
+        <li class="bg-gray-300 py-[10px] px-[20px] rounded-[30px] text-[16px]">
+          <a href="#" class="text-gray-800">국/찌개/탕</a>
+        </li>
+        <li class="bg-gray-300 py-[10px] px-[20px] rounded-[30px] text-[16px]">
+          <a href="#" class="text-gray-800">어린이 반찬</a>
+        </li>
+        <li class="bg-gray-300 py-[10px] px-[20px] rounded-[30px] text-[16px]">
+          <a href="#" class="text-gray-800">볶음</a>
+        </li>
+        <li class="bg-gray-300 py-[10px] px-[20px] rounded-[30px] text-[16px]">
+          <a href="#" class="text-gray-800">무침</a>
+        </li>
+        <li class="bg-gray-300 py-[10px] px-[20px] rounded-[30px] text-[16px]">
+          <a href="#" class="text-gray-800">메인요리</a>
+        </li>
+        <li class="bg-gray-300 py-[10px] px-[20px] rounded-[30px] text-[16px]">
+          <a href="#" class="text-gray-800">조림</a>
+        </li>
+      </ul>
+
+      <!-- 카드 -->
+      <div class="w-[280px] h-[515px] bg-white">1</div>
+      <div class="w-[280px] h-[515px] bg-white">2</div>
+      <div class="w-[280px] h-[515px] bg-white">3</div>
+      <div class="w-[280px] h-[515px] bg-white">4</div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-[1200px] w-full mx-auto h-[200px] bg-[greenyellow]"></footer>
+
+
+  <!--
+  mt-4   /* 위쪽 여백 */
+  mb-6   /* 아래쪽 여백 */
+  mx-auto /* 좌우 자동 → 가운데 정렬 */
+  rounded-[30px] : border-radius: 30px;
+
+  -->
+</body>
+</html>

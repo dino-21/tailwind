@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>집반찬</title>
+
+  <link href="dist/output.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="font-sans text-black">
+
+
+
+  <!-- Main -->
+  <main class="max-w-[1200px] w-full mx-auto min-h-[600px] ">
+
+    <!-- 새로 나온 반찬 -->
+    <div class="new-banchan w-full h-[1000px] border-orange-400 flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        새로 나온 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+
+      <!-- 카드 8개 (이미지 경로만 다름) -->
+      <!-- 1 -->
+      <!-- <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan1.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a> -->
+
+      <!-- 카드 8개 수정 -->
+      <!-- <a href="#">
+        <div class="product-card">
+          <img src="img/03_new_banchan/new_banchan1.jpg" class="card-img" alt="" />
+          <h4 class="card-title">무나물</h4>
+          <p class="card-desc">푹 익혀서 먹기 편해요</p>
+          <h5 class="card-price">2800원</h5>
+        </div>
+      </a> -->
+
+
+      <!-- 여기 안에 JS로 카드들이 채워짐 -->
+
+    </div>
+
+
+  </main>
+
+<script>
+  async function loadNewBanchan() {
+    const res = await fetch("https://dino-21.github.io/zipbanchan/json/03_newbanchan.json");
+    const data = await res.json();
+
+    const box = document.querySelector(".new-banchan");
+
+    data.forEach(item => {
+      const a = document.createElement("a");
+      a.href = "#";
+
+      const card = document.createElement("div");
+      card.className = "product-card";
+
+      card.innerHTML = `
+        <img src="${item.main_img}" alt="${item.name}" class="card-img">
+        <h4 class="card-title">${item.name}</h4>
+        <p class="card-desc">${item.description}</p>
+        <h5 class="card-price">${item.price}원</h5>
+      `;
+
+      a.appendChild(card);
+      box.appendChild(a);
+    });
+  }
+
+  loadNewBanchan();
+</script>
+
+</body>
+
+</html>

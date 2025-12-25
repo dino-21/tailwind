@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>집반찬-유틸리티들을 묶어서 내가 만든 클래스로 정의-cdn</title>
+
+  <!-- <link href="dist/output.css" rel="stylesheet"> -->
+   
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body class="font-sans text-black">
+
+  <!-- Header -->
+  <header class="max-w-[1200px] w-full mx-auto flex justify-between flex-wrap items-center h-[150px]">
+
+    <!-- 검색 박스 -->
+    <div class="w-[350px] h-[60px] bg-white border border-gray-300 rounded-lg flex justify-between items-center px-2">
+      <input type="text" placeholder="반찬을 입력해주세요" class="border-none outline-none text-[15px] w-[180px]" />
+      <img src="img/search_icon.png" alt="" class="w-10 h-10 cursor-pointer" />
+    </div>
+
+
+
+    <!-- 로고 -->
+    <div class="w-[350px] h-[70px] flex items-center justify-center">
+      <img src="img/logo.png" alt="" class="max-h-full" />
+    </div>
+
+
+    <!-- 오른쪽 박스 (로그인 + 메뉴) -->
+    <div class="w-[400px] h-[90px] flex flex-col justify-between">
+
+      <!-- 로그인 영역 -->
+      <div class="w-full h-[30px] flex items-center justify-end text-[12px]">
+        <ul class="flex gap-4 mr-3">
+          <li><a href="#" class="text-gray-600">로그인</a></li>
+          <li><a href="#" class="text-gray-600">회원가입</a></li>
+          <li><a href="#" class="text-gray-600">고객센터</a></li>
+        </ul>
+      </div>
+
+      <!-- 메뉴 영역 -->
+      <nav class="w-full h-[40px]  flex items-center mt-[10px]">
+        <ul class="flex justify-end gap-4 w-full pr-4 text-[15px]">
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon1.png" alt="" class="w-6 h-6 fo" />브랜드
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon2.png" alt="" class="w-6 h-6" /> 반찬보기
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon3.png" alt="" class="w-6 h-6" /> 장바구니
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon4.png" alt="" class="w-6 h-6" /> 내정보
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="max-w-[1200px] w-full mx-auto h-[600px] bg-green-200">서브</div>
+
+  <!-- Footer -->
+  <footer class="max-w-[1200px] w-full mx-auto h-[200px]   flex gap-10 px-4 py-6">
+    <!-- 왼쪽 -->
+    <div class="flex-1 p-3 text-[11px]">
+      <h4 class="font-bold mb-1 text-[13px]">고객센터</h4>
+      <p class="font-bold text-[12px]">1588-3754</p>
+      <p>zipbanchan@sannamchon.co.kr</p>
+      <p class="mt-2 leading-relaxed">
+        평일 08:30~17:30 / 토요일 08:30~12:00<br />
+        점심시간 12:00~13:00<br />
+        일요일, 공휴일은 휴무입니다.
+      </p>
+    </div>
+
+
+    <!-- 오른쪽 -->
+    <div class="flex-[2] p-3 text-[11px] ">
+      <h4 class="font-bold mb-1 text-[13px]">집반찬연구소</h4>
+      <p class="leading-relaxed">
+        인천광역시 서구 가석로 26(가좌동) 집반찬연구소 대표자: 박종철<br />
+        사업자등록번호: 121-86-17743 통신판매업 신고번호: 제 2023-인천서구-3834 호 개인정보보호책임자: 정문채<br />
+        제품 문의: zipbanchan@sannamchon.co.kr
+      </p>
+
+      <p class="mt-2">
+        <a href="#" class="mx-1 text-gray-800 no-underline hover:underline">집반찬연구소 소개</a> |
+        <a href="#" class="mx-1 text-gray-800 no-underline hover:underline">이용약관</a> |
+        <a href="#" class="mx-1 text-gray-800 no-underline hover:underline">개인정보처리방침</a>
+      </p>
+
+      <p class="mt-2">
+        Copyright © SANNAMCHON CORP. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>집반찬</title>
+  <!-- Tailwind 빌드 결과 CSS -->
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-black">
+
+  <!-- Header -->
+  <header
+    class="max-w-[1200px] w-full mx-auto flex justify-between flex-wrap items-center h-[150px]">
+
+    <!-- 검색 박스 -->
+    <div class="w-[350px] h-[60px] bg-white border border-gray-300 rounded-lg flex justify-between items-center px-2">
+      <input type="text" placeholder="반찬을 입력해주세요"
+             class="border-none outline-none text-[15px] w-[180px]" />
+      <img src="img/search_icon.png" alt=""
+           class="w-10 h-10 cursor-pointer" />
+    </div>
+
+
+ 
+    <!-- 로고 -->
+    <div class="w-[350px] h-[70px] flex items-center justify-center">
+      <img src="img/logo.png" alt="" class="max-h-full" />
+    </div>
+
+
+    <!-- 오른쪽 박스 (로그인 + 메뉴) -->
+      <div class="w-[400px] h-[90px] flex flex-col justify-between">
+
+        <!-- 로그인 영역 -->
+      <div class="w-full h-[30px] flex items-center justify-end text-[12px]">
+        <ul class="flex gap-4 mr-3">
+          <li><a href="#" class="text-gray-600">로그인</a></li>
+          <li><a href="#" class="text-gray-600">회원가입</a></li>
+          <li><a href="#" class="text-gray-600">고객센터</a></li>
+        </ul>
+      </div>
+ 
+      <!-- 메뉴 영역 -->
+      <nav class="w-full h-[40px]  flex items-center mt-[10px]">
+        <ul class="flex justify-end gap-4 w-full pr-4 text-[15px]">
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon1.png" alt="" class="w-6 h-6 fo" />브랜드
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon2.png" alt="" class="w-6 h-6" /> 반찬보기
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon3.png" alt="" class="w-6 h-6" /> 장바구니
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 text-black no-underline">
+              <img src="img/icon4.png" alt="" class="w-6 h-6" /> 내정보
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SLIDER -->
+  <section class="w-full min-h-[450px] bg-red-400">
+    <img src="img/banner/banner_5.png" alt="" class="w-full h-full object-cover  min-h-[450px]" />
+  </section>
+
+  
+  <!-- Main -->
+  <main class="max-w-[1200px] w-full mx-auto min-h-[600px] ">
+
+    <!-- 부담없는 알뜰 반찬 -->
+    <div
+      class="w-full h-[1000px] flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        부담없는 알뜰 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+    
+      <!-- product-card 공통 스타일: 280 x 395 -->
+      <!-- 1~8 카드 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan1.jpg" alt=""
+               class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan2.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan3.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan4.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan5.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan6.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan7.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/01_banchan/banchan8.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-bold">무나물</h4>
+          <p class="text-[14px] text-gray-600 text-left">푹 익혀서 먹기 편해요</p>
+          <h5 class="text-[17px] text-black font-bold">2800원</h5>
+        </div>
+      </a>
+      
+    </div>
+
+    <!-- 어린이 반찬 -->
+    <div
+      class="w-full h-[600px] border-blue-500 flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        어린이 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+      <!-- 4개 카드 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/02_kid_banchan/kid_banchan1.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-extrabold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-extrabold">2800원</h5>
+        </div>
+      </a>
+
+     
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/02_kid_banchan/kid_banchan2.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-extrabold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-extrabold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/02_kid_banchan/kid_banchan3.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-extrabold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-extrabold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/02_kid_banchan/kid_banchan4.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-extrabold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-extrabold">2800원</h5>
+        </div>
+      </a>
+    </div>
+
+    <!-- 새로 나온 반찬 -->
+    <div
+      class="w-full h-[1000px] border-orange-400 flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        새로 나온 반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        착한 가격으로 챙기는 든든 한 끼
+      </p>
+
+     
+      <!-- 카드 8개 (이미지 경로만 다름) -->
+      <!-- 1 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan1.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+      <!-- 2 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan2.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+      <!-- 3 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan3.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+      <!-- 4 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan4.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black  font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+      <!-- 5 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan5.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+      <!-- 6 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan6.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+      <!-- 7 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan7.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+      <!-- 8 -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[395px] bg-white flex flex-col gap-1">
+          <img src="img/03_new_banchan/new_banchan8.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black font-semibold">2800원</h5>
+        </div>
+      </a>
+    </div>
+
+
+    <!-- 배너 -->
+    <section
+      class="w-full min-h-[200px] border-green-500 flex flex-wrap justify-center items-center gap-4 my-8">
+      <a href="#"><img src="img/banner/banner1.png" alt=""
+                       class="w-[380px] h-[130px] object-cover" /></a>
+      <a href="#"><img src="img/banner/banner2.png" alt=""
+                       class="w-[380px] h-[130px] object-cover" /></a>
+      <a href="#"><img src="img/banner/banner3.png" alt=""
+                       class="w-[380px] h-[130px] object-cover" /></a>
+    </section>
+
+
+    <!-- MD 추천반찬 -->
+    <div
+      class="w-full h-[750px border-black flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        MD 추천반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        이번 주 가장 추천하는 제품만 골라드려요
+      </p>
+
+      
+      <!-- 탭 메뉴 -->
+      <ul class="w-full min-h-[45px] flex justify-center gap-5 mb-8">
+        <li class="bg-green-900 text-white rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-white">비빔밥</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">국/찌개/탕</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">어린이 반찬</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">볶음</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">무침</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">메인요리</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">조림</a>
+        </li>
+      </ul>
+
+      <!-- 카드 4-->
+      
+      <!-- md-card 4개 (280 x 515) -->
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[515px] bg-white flex flex-col">
+          <img src="img/04_md_banchan/bibim/bibim_1.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black mt-auto font-semibold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[515px] bg-white flex flex-col">
+          <img src="img/04_md_banchan/bibim/bibim_2.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black mt-auto font-semibold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[515px] bg-white flex flex-col">
+          <img src="img/04_md_banchan/bibim/bibim_3.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black mt-auto font-semibold">2800원</h5>
+        </div>
+      </a>
+
+      <a href="#" class="no-underline">
+        <div class="w-[280px] h-[515px] bg-white flex flex-col">
+          <img src="img/04_md_banchan/bibim/bibim_4.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black mt-auto font-semibold">2800원</h5>
+        </div>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-[1200px] w-full mx-auto h-[200px]   flex gap-10 px-4 py-6">
+       <!-- 왼쪽 -->
+    <div class="flex-1 p-3 text-[11px]">
+      <h4 class="font-bold mb-1 text-[13px]">고객센터</h4>
+      <p class="font-bold text-[12px]">1588-3754</p>
+      <p>zipbanchan@sannamchon.co.kr</p>
+      <p class="mt-2 leading-relaxed">
+        평일 08:30~17:30 / 토요일 08:30~12:00<br />
+        점심시간 12:00~13:00<br />
+        일요일, 공휴일은 휴무입니다.
+      </p>
+    </div>
+
+
+    <!-- 오른쪽 -->
+    <div class="flex-[2] p-3 text-[11px] ">
+      <h4 class="font-bold mb-1 text-[13px]">집반찬연구소</h4>
+      <p class="leading-relaxed">
+        인천광역시 서구 가석로 26(가좌동) 집반찬연구소 대표자: 박종철<br />
+        사업자등록번호: 121-86-17743 통신판매업 신고번호: 제 2023-인천서구-3834 호 개인정보보호책임자: 정문채<br />
+        제품 문의: zipbanchan@sannamchon.co.kr
+      </p>
+
+      <p class="mt-2">
+        <a href="#" class="mx-1 text-gray-800 no-underline hover:underline">집반찬연구소 소개</a> |
+        <a href="#" class="mx-1 text-gray-800 no-underline hover:underline">이용약관</a> |
+        <a href="#" class="mx-1 text-gray-800 no-underline hover:underline">개인정보처리방침</a>
+      </p>
+
+      <p class="mt-2">
+        Copyright © SANNAMCHON CORP. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

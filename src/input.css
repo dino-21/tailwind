@@ -1,0 +1,85 @@
+/* v4 버전 src/input.css */
+
+@import "tailwindcss";
+
+   /*
+    @apply 디렉티브를 사용한 스타일 구성 
+    공통 클래스 정의
+      Tailwind는 CSS를 base → components → utilities 순서로 처리
+      우리가 만든 공통 클래스는 components 레이어에 넣는다
+      input.css에서만 가능
+
+      @layer와 @apply는 브라우저가 아니라 Tailwind 빌드 단계에서만 동작
+      
+      @apply는 Tailwind 유틸리티를 내가 만든 CSS 클래스로 묶어주는 문법이고,
+      @layer components는 그 클래스를 컴포넌트 레벨로 등록하는 선언
+      
+
+      Tailwind → 컴포넌트 → 리액트 컴포넌트
+
+  */
+        
+ @layer components {
+    /* 카드 공통 */
+    .product-card {
+         @apply w-[280px] h-[395px] bg-white flex flex-col gap-1;
+    }
+
+   /* md 카드 */
+    .md-card {  
+         @apply w-[280px] h-[515px] bg-white flex flex-col;
+    }
+
+
+    .card-img {
+        @apply w-full mb-4;
+    }
+
+    .card-title {
+        @apply text-[17px] text-black font-bold;
+    }
+
+    .card-desc {
+        @apply text-[14px] text-gray-600 text-left;
+    }
+
+    .card-price {
+        @apply text-[17px] text-black font-bold;
+    }
+
+  
+    /* 탭 메뉴 */
+
+      /* 탭 메뉴 컨테이너 */
+  .tab-list {
+    @apply w-full min-h-[45px]
+           flex justify-center gap-5
+           mb-8;
+  }
+
+  /* 탭 기본 아이템 */
+  .tab-item {
+    @apply bg-gray-300
+           rounded-full
+           text-[16px]
+           px-5 py-2;
+  }
+
+  /* 활성 탭 */
+  .tab-active {
+    @apply bg-green-900
+           rounded-full
+           text-[16px]
+           px-5 py-2;
+  }
+
+  /* 탭 링크 */
+  .tab-link {
+    @apply text-gray-800;
+  }
+
+  /* 활성 탭 링크 */
+  .tab-link-active {
+    @apply text-white;
+  }
+}

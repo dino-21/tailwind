@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>집반찬</title>
+
+  <link href="dist/output.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="font-sans text-black">
+
+
+  <!-- Main -->
+  <main class="max-w-[1200px] w-full mx-auto min-h-[600px] ">
+
+    <!-- MD 추천반찬 -->
+    <div class="md-banchan w-full h-[750px border-black flex flex-wrap justify-center content-center gap-[15px] my-[30px]">
+      <h3 class="w-full text-[27px] text-center leading-[30px] font-bold">
+        MD 추천반찬
+      </h3>
+      <p class="w-full text-[17px] text-center text-gray-600 mb-[25px]">
+        이번 주 가장 추천하는 제품만 골라드려요
+      </p>
+
+
+      <!-- 탭 메뉴 -->
+      <!-- <ul class="w-full min-h-[45px] flex justify-center gap-5 mb-8">
+        <li class="bg-green-900 text-white rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-white">비빔밥</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">국/찌개/탕</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">어린이 반찬</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">볶음</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">무침</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">메인요리</a>
+        </li>
+        <li class="bg-gray-300 rounded-full text-[16px] px-5 py-2">
+          <a href="#" class="text-gray-800">조림</a>
+        </li>
+      </ul> -->
+
+ 
+      <!-- 탭 메뉴 수정 -->
+      <ul class="tab-list">
+        <li class="tab-active">
+          <a href="#" class="tab-link tab-link-active">비빔밥</a>
+        </li>
+        <li class="tab-item">
+          <a href="#" class="tab-link">국/찌개/탕</a>
+        </li>
+        <li class="tab-item">
+          <a href="#" class="tab-link">어린이 반찬</a>
+        </li>
+        <li class="tab-item">
+          <a href="#" class="tab-link">볶음</a>
+        </li>
+        <li class="tab-item">
+          <a href="#" class="tab-link">무침</a>
+        </li>
+        <li class="tab-item">
+          <a href="#" class="tab-link">메인요리</a>
+        </li>
+        <li class="tab-item">
+          <a href="#" class="tab-link">조림</a>
+        </li>
+      </ul>
+
+
+
+      <!-- 카드 4-->
+
+      <!-- md-card 4개 (280 x 515) -->
+      <!-- <a href="#" class="no-underline">
+        <div class="w-[280px] h-[515px] bg-white flex flex-col">
+          <img src="img/04_md_banchan/bibim/bibim_1.jpg" alt="" class="w-full mb-4" />
+          <h4 class="text-[17px] text-black font-semibold">새콤 오이무생채</h4>
+          <p class="text-[14px] text-gray-600 text-left">아이들이 먹기 좋은 깔끔한 무생채</p>
+          <h5 class="text-[17px] text-black mt-auto font-semibold">2800원</h5>
+        </div>
+      </a> -->
+
+      <!-- 카드 4수정 -->
+
+      <!-- <a href="#">
+        <div class="md-card">
+          <img src="img/04_md_banchan/bibim/bibim_1.jpg" class="card-img" alt="" />
+          <h4 class="card-title">무나물</h4>
+          <p class="card-desc">푹 익혀서 먹기 편해요</p>
+          <h5 class="card-price">2800원</h5>
+        </div>
+      </a> -->
+
+
+      <!-- 여기 안에 JS로 카드들이 채워짐 -->
+
+    </div>
+
+  </main>
+<script>
+  // ============================
+  //   카드 하나 만드는 함수
+  // ============================
+  function createMdCard(item) {
+    const a = document.createElement("a");
+    a.href = "#";
+    a.className = "no-underline";
+
+    const card = document.createElement("div");
+    card.className = "md-card";
+
+    card.innerHTML = `
+      <img src="${item.main_img}" alt="${item.name}" class="card-img">
+      <h4 class="card-title">${item.name}</h4>
+      <p class="card-desc">${item.description}</p>
+      <h5 class="card-price">${item.price}원</h5>
+    `;
+
+    a.appendChild(card);
+    return a;
+  }
+
+  // ============================
+  //   선택된 카테고리 렌더링
+  // ============================
+  function renderCategory(data, category, section) {
+    // 기존 카드 제거
+    section.querySelectorAll(".md-card").forEach(card => card.parentElement.remove());
+
+    // 새 카드 추가
+    data
+      .filter(item => item.category === category)
+      .forEach(item => section.appendChild(createMdCard(item)));
+  }
+
+  // ============================
+  //   탭 활성화 처리
+  // ============================
+  function setActive(liList, activeLi) {
+    liList.forEach(li => {
+      // li 스타일
+      li.classList.remove("tab-active");
+      li.classList.add("tab-item");
+
+      // a 스타일
+      const link = li.querySelector("a");
+      if (link) {
+        link.classList.remove("tab-link-active");
+        link.classList.add("tab-link");
+      }
+    });
+
+    // 선택된 li
+    activeLi.classList.remove("tab-item");
+    activeLi.classList.add("tab-active");
+
+    const activeLink = activeLi.querySelector("a");
+    if (activeLink) {
+      activeLink.classList.add("tab-link-active");
+      activeLink.classList.remove("tab-link");
+    }
+  }
+
+  // ============================
+  //      JSON 로딩 + 이벤트
+  // ============================
+  fetch("https://dino-21.github.io/zipbanchan/json/04_mdbanchan.json")
+    .then(res => res.json())
+    .then(data => {
+      const mdSection = document.querySelector(".md-banchan");
+      const liList = mdSection.querySelectorAll(".tab-list li");
+
+      const categories = ["bibim", "soup", "kid", "bokkeum", "muchim", "main", "jorim"];
+
+      // ★ 초기 화면: 첫 번째 탭 + 비빔밥
+      setActive(liList, liList[0]);
+      renderCategory(data, categories[0], mdSection);
+
+      // 탭에 마우스 올렸을 때
+      liList.forEach((li, index) => {
+        li.addEventListener("mouseover", (e) => {
+          e.preventDefault();       // a 이동 막기
+          setActive(liList, li);    // 탭 색 변경
+          renderCategory(data, categories[index], mdSection); // 카드 교체
+        });
+      });
+    })
+    .catch(err => console.error("MD 추천반찬 JSON 로딩 오류:", err));
+</script>
+
+
+</body>
+
+</html>
