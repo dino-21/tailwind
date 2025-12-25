@@ -12,16 +12,16 @@ async function loadNewBanchan() {
 
   data.forEach((item) => {
     const a = document.createElement("a");
-    a.href = "#";
+    a.href = "sub.html";
 
     const card = document.createElement("div");
     card.className = "product-card";
 
     card.innerHTML = `
-        <img src="${item.main_img}" alt="${item.name}" class="card-img">
-        <h4 class="card-title">${item.name}</h4>
-        <p class="card-desc">${item.description}</p>
-        <h5 class="card-price">${item.price}원</h5>
+        <img src="${item.main_img}" alt="${item.name}">
+        <h4>${item.name}</h4>
+        <p>${item.description}</p>
+        <h5>${item.price}원</h5>
       `;
 
     a.appendChild(card);

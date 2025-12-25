@@ -11,12 +11,12 @@ fetch("https://dino-21.github.io/zipbanchan/json/01_banchan.json")
 
     data.forEach((item) => {
       box.innerHTML += `
-            <a href="#">
+            <a href="sub.html" target="_self">
               <div class="product-card">
-                <img src="${item.main_img}"  class="card-img" alt="${item.name}">
-                <h4 class="card-title">${item.name}</h4>
-                <p class="card-desc">${item.description}</p>
-                <h5 class="card-price">${item.price}원</h5>
+                <img src="${item.main_img}" alt="${item.name}">
+                <h4>${item.name}</h4>
+                <p>${item.description}</p>
+                <h5>${item.price}원</h5>
               </div>
             </a>
           `;

@@ -7,44 +7,40 @@ const URL = "https://dino-21.github.io/zipbanchan/json/02_kidbanchan.json";
 fetch(URL)
   .then((res) => res.json())
   .then((data) => {
-    // 어린이 반찬 박스
+    // 어린이 반찬 박스 찾기
     const box = document.querySelector(".kid-banchan");
 
-    // 기존 카드 삭제 (선택)
-    box.querySelectorAll("a").forEach((a) => a.remove());
+    // 혹시 남아 있을지 모를 기존 카드 제거
+    const oldCards = box.querySelectorAll("a");
+    oldCards.forEach((a) => a.remove());
 
+    // JSON 데이터로 카드 생성
     data.forEach((item) => {
-      // <a>
       const a = document.createElement("a");
-      a.href = "#";
+      a.href = "sub.html";
 
-      // 카드 박스
       const card = document.createElement("div");
       card.className = "product-card";
 
-      // 이미지
       const img = document.createElement("img");
       img.src = item.main_img;
       img.alt = item.name;
-      img.className = "card-img";
 
-      // 제목
       const h4 = document.createElement("h4");
       h4.textContent = item.name;
-      h4.className = "card-title";
 
-      // 설명
       const p = document.createElement("p");
       p.textContent = item.description;
-      p.className = "card-desc";
 
-      // 가격
       const h5 = document.createElement("h5");
       h5.textContent = item.price + "원";
-      h5.className = "card-price";
 
       // 조립
-      card.append(img, h4, p, h5);
+      card.appendChild(img);
+      card.appendChild(h4);
+      card.appendChild(p);
+      card.appendChild(h5);
+
       a.appendChild(card);
       box.appendChild(a);
     });
